@@ -10,7 +10,8 @@ public class Main {
         int cntz = 0;
         int cntn = 0;
         int cnte = 0;
-
+        int cntv = 0;
+        int cntm = 0;
 
         char rijec ;
         for(int i =0; i< recenica.length();i++)
@@ -18,6 +19,8 @@ public class Main {
 
             rijec=recenica.charAt(i);
             if(Character.isAlphabetic(rijec)){
+                if(Character.isUpperCase(rijec))cntv++;
+                    else cntm++;
                 cntz++;
             }
             else if (Character.isDigit(rijec))cntn++;
@@ -25,9 +28,7 @@ public class Main {
                 else cnte++;
         }
 
-
-
-        System.out.println("Znakovi:"+cntz+"\nBrojevi:"+cntn+"\nOstalo:"+cnte);
+        System.out.println("Znakovi:"+cntz+"\nBrojevi:"+cntn+"\nOstalo:"+cnte +"\nVelika slova:"+cntv+"\nMala slova:"+cntm);
 
 
 
